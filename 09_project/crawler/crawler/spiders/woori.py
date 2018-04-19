@@ -150,7 +150,7 @@ class WooriSpider(scrapy.Spider):
             for bubwon_gae_idx in self.bubwon_gae[bubwon_idx]:
                 fd = {'resBubwon':'{}'.format(bubwon_idx),
                 'resGae':'{0:02d}'.format(bubwon_gae_idx),
-                'resSerStartdate':'20131230',
+                'resSerStartdate':start,
                 'resSerEnddate':'',
                 'resChgPage':'1',
                 'nowPge':'1',
@@ -252,7 +252,6 @@ class WooriSpider(scrapy.Spider):
                 drxs = drx.xpath('//td//text()').extract()
                 #self.logger.info(drxs)
                 refers.append(
-                #logging.log(logging.DEBUG, 
                 {
                     'auctionInfo':'{} {}'.format(drxs[0].replace('\xa0',' '), drxs[1].replace('\xa0',' ')),
                     'auctionDate': drxs[2],
@@ -267,19 +266,3 @@ class WooriSpider(scrapy.Spider):
 
 
         yield data
-
-
-        
-        #logging.log(logging.DEBUG, "value = {} - {}".format(caNo, value))
-
-
-        
-
-
-
-
-
-
-
-
-
