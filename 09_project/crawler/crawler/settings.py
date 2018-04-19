@@ -66,7 +66,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'crawler.pipelines.CrawlerPipeline': 300,
-    'crawler.pipelines.FlumeHttpPipeline': 300,
+#    'crawler.pipelines.FlumeHttpPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -97,3 +97,5 @@ FEED_EXPORTERS = {
 }
 
 FLUME_URL = 'http://localhost:50000'
+
+LOG_FORMAT = '{"time":"%(asctime)s", "name":"%(name)s", "levelname":"%(levelname)s", "message":"%(message)s"}'
