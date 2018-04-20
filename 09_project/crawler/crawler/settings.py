@@ -96,6 +96,6 @@ FEED_EXPORTERS = {
     'json': 'scrapy.exporters.JsonLinesItemExporter'
 }
 
-FLUME_URL = 'http://localhost:50000'
+#FLUME_URL = 'http://localhost:50000'
 
-LOG_FORMAT = '{"time":"%(asctime)s", "name":"%(name)s", "levelname":"%(levelname)s", "message":"%(message)s"}'
+#LOG_FORMAT = '{"time":"%(asctime)s", "name":"%(name)s", "levelname":"%(levelname)s", "message":"%(message)s"}'
